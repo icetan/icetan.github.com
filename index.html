@@ -1,20 +1,161 @@
-<!doctype>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Christopher Fredén</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+        color: #222;
+        font-family: sans-serif;
+        font-weight: 300;
+        line-height: 1.4em;
+      }
+      body > div:first-child {
+        max-width: 630px;
+        height: 100%;
+        margin: auto;
+      }
+      header {
+        padding: 2em 0;
+      }
+
+      h1,h2,h3,h4,h5,h6 {
+        font-weight: 600;
+        line-height: 1.1em;
+      }
+      h1 {
+        font-size: 3.5em;
+        margin: 0.3em 0;
+      }
+      blockquote {
+        border-left: 4px solid #DDD;
+        padding: 0 15px;
+        color: #777;
+        margin-left: 0;
+      }
+      section {
+        padding-bottom: 1em;
+      }
+
+      #icosphere {
+        float: left;
+        width: 160px;
+        height: 160px;
+        margin-left: -180px;
+      }
+
+      .tile {
+        display: block;
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        margin: 0 10px 10px 0;
+        color: white;
+        background-color: #666;
+        text-align: center;
+        font-size: 24px;
+        text-decoration: none;
+        background-size: 300%;
+        font-weight: 400;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+      }
+      .tile > .details {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 15px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.4em;
+        background-color: rgba(0,0,0,0.7);
+        text-align: left;
+      }
+      .tile:hover {
+        background-color: black !important;
+        color: white;
+      }
+      .tile:hover > .details {
+        display: block;
+      }
+
+      .clear {
+        visibility: hidden;
+        overflow: hidden;
+        width: 0; height: 0;
+        clear: both;
+      }
+
+      #soundcloud { background-color: #f2691e; }
+      #twitter { background-color: #00aced; }
+      #lastfm { background-color: #d51007; }
+      #github { background-color: #222; }
+      #dr-markdown { background-color: #b8b8b8; }
+      #vixen { background-color: #f58b51; }
+      #tinci { background-color: #63ee50; }
+      #blox { background-color: #e862f0; }
+    </style>
   </head>
   <body>
-    <blockquote>
-      <p>As you might know, I am a full time Internet</p>
+    <div>
+      <header>
+        <div id="icosphere"></div>
+        <h1>Christopher Fredén</h1>
+        <blockquote>
+          <p>As you might know, I am a full time Internet</p>
 
-      <p><cite>— Horse ebooks</cite></p>
-    </blockquote>
-
-    <p>plz say hi <a href="https://twitter.com/icetan">twitter</a>,
-    <a href="http://www.last.fm/user/icetan">last.fm</a>,
-    <a href="https://github.com/icetan">github</a>.</p>
-
-    <p>stuff i made <a href="http://icetan.github.com/dr-markdown/">Dr. Markdown</a></p>
+          <p><cite>— Horse ebooks</cite></p>
+        </blockquote>
+      </header>
+      <div role="main">
+        <section>
+          <h2>Social</h2>
+          <a id="soundcloud" class="tile" href="https://soundcloud.com/icetan">SoundCloud</a>
+          <a id="twitter" class="tile" href="https://twitter.com/icetan">Twitter</a>
+          <a id="lastfm" class="tile" href="http://www.last.fm/user/icetan">Last.fm</a>
+          <a id="github" class="tile" href="https://github.com/icetan">GitHub</a>
+          <div class="clear"></div>
+        </section>
+        <section>
+          <h2>Projects</h2>
+          <a id="dr-markdown" class="tile" href="http://icetan.github.com/dr-markdown/">
+            Dr. Markdown
+            <div class="details">Web based markdown editor</div>
+          </a>
+          <a id="vixen" class="tile" href="http://icetan.github.io/vixen/">
+            Vixen
+            <div class="details">DOM/string-templating hybrid for model
+              driven HTML views</div>
+          </a>
+          <a id="tinci" class="tile" href="http://icetan.github.io/tinci/">
+            tinci
+            <div class="details">Stands for TINy Continuous Integration for Git
+              repos</div>
+          </a>
+          <a id="blox" class="tile" href="https://github.com/icetan/blox">
+            blox
+            <div class="details">Simple terminal based multi player tetris
+              clone</div>
+          </a>
+          <div class="clear"></div>
+        </section>
+        <section>
+          <p>
+            Give me a shout or check out some of my projects and if you're
+            interested have a look at my
+            <a href="http://icetan.github.io/dr-markdown/#theme=cv,full;base64;Q2hyaXN0b3BoZXIgRnJlZMOpbgo9PT09PT09PT09PT09PT09PT0KCiFbXShodHRwOi8vZ3JhdmF0YXIuY29tL2F2YXRhci9lYThmNGQ0ZTU1YjdmOGRkMTczMjVjNWU4NDA0NmI4Yj9zPTE4MCkKCmBgYAoxOTg2LTA3LTA5CgpBbWlyYWxpdGV0c2dhdGFuIDI5Ywo0MTQgNjIgR8O2dGVib3JnLCBTd2VkZW4KCmMuZnJlZGVuQGdtYWlsLmNvbQorNDYgKDApNzA4IDM0IDY4IDE5CmBgYAoKCkV4cGVyaWVuY2UKLS0tLS0tLS0tLS0tLS0tCgojIyMgU3lzdGVtIERldmVsb3BlciAvIFdlYiBEZXZlbG9wZXIKCioqS2FydGVuYSBBQiwgR8O2dGVib3JnKiogKmF0IE9jdG9iZXIgMjAwNSDigJQgdG9kYXkqCgpLYXJ0ZW5hIGRvZXMgbW9zdGx5IGNvbnN1bHRpbmcgZm9yIEdlb2dyYXBoaWNhbCBJbmZvcm1hdGlvbiBTeXN0ZW0gbmVlZHMsIHN1Y2ggYXMgbWFwcywgcmVhbCB0aW1lIHBvc2l0aW9uaW5nIGFuZCByb3V0ZSBvcHRpbWl6YXRpb24uCgpJIGhhdmUgYmVlbiBpbnZvbHZlZCBpbiBtYW55IHByb2plY3RzIGFuZCBtb3N0IG9mIHdoaWNoIGFyZSB3ZWIgYmFzZWQuIFdlIG1vc3RseSBkZXZlbG9wIGluIC5ORVQgYnV0IG5vdCBmb3IgYWxsIHByb2plY3RzLiBTb21lIG9mIHRoZSBtb3JlIHJlY2VudCBwcm9qZWN0cyBJIGhhdmUgc3RhcnRlZCBoYXZlIGJlZW4gTm9kZS5qcyBiYXNlZC4KClV0aWxpemluZyB0aGUgb3Blbi1zb3VyY2UgY29tbXVuaXR5IHdlIGFsc28gZ2V0IHNvbWUgdGltZSB0byBnaXZlIGJhY2suIE9uZSBwcm9qZWN0IEkgd29ya2VkIG9uIGZvciBhZGRpbmcgY3VzdG9tIHByb2plY3Rpb25zIHdpdGggUHJvajQgdG8gTGVhZmxldCBhIG9wZW4tc291cmNlIG1hcCBjbGllbnQgW1Byb2o0TGVhZmxldF0oaHR0cHM6Ly9naXRodWIuY29tL2thcnRlbmEvcHJvajRsZWFmbGV0KS4gTW9yZSByZWNlbnRseSBJIGNyZWF0ZWQgYSBzdGF0aWMgbWFwIGdlbmVyYXRvciwgW3ByaW50bGV0XShodHRwczovL2dpdGh1Yi5jb20va2FydGVuYS9wcmludGxldCkgYnVpbHQgd2l0aCBOb2RlLmpzLgoKCiMjIyBTeXN0ZW0gRGV2ZWxvcGVyCgoqKkhlbGlvc3BlY3RyYSBBQiwgR8O2dGVib3JnKiogKmF0IE5vdmVtYmVyIDIwMTAg4oCUIEphbnVhcnkgMjAxMSoKCkhlbGlvc3BlY3RyYSBwcm92aWRlcyBhICJzbWFydCIsIGVuZXJneSBlZmZpY2llbnQsIGF1dG9ub21vdXMgbGlnaHQgZW5naW5lIGZvciBncmVlbmhvdXNlcy4gSSB3YXMgaGlyZWQgdG8gd3JpdGUgdGhlIHNvZnR3YXJlIGZvciB0aGVpciBwcm90b3R5cGUgbGFtcC4KClRoZSBwcm90b3R5cGUgbGFtcCBjb250cm9sbGVyIHdhcyBhbiBlbWJlZGRhYmxlIEFSTS1wcm9jZXNzb3Igd2hpY2ggcmFuIERlYmlhbiBMaW51eC4gSSB3cm90ZSBhIHNjaGVkdWxlciBhbmQgYSBzaW1wbGUgc29ja2V0IGNvbW1hbmQgaW50ZXJmYWNlIGZvciBpdCBpbiBQeXRob24uIEkgYWxzbyBjb25maWd1cmVkIHRoZSBEZWJpYW4gaW5zdGFsbGF0aW9uIGFuZCBjcmVhdGVkIGEgd2F5IHRvIGVhc2lseSBmbGFzaCB0aGUgZW50aXJlIHNldHVwIHRvIGEgdW5pdC4KClRoaXMgam9iIHdhcyBwYXJhbGxlbCB0byBteSBlbXBsb3ltZW50IGF0IEthcnRlbmEuCgoKIyMjIFN5c3RlbSBEZXZlbG9wZXIKCioqU3RhZHNieWdnbmFkc2tvbnRvcmV0IChDaXR5IFBsYW5uaW5nIERlcGFydG1lbnQpLCBHw7Z0ZWJvcmcqKiAqYXQgMjAwNSoKCkRlc2lnbmVkIGFuZCBkZXZlbG9wZWQgYSB3ZWIgYmFzZWQgcHJvamVjdCBtYW5hZ2VtZW50IHN5c3RlbSBmb3IgdGhlIGxhbmRzY2FwaW5nIGRlcGFydG1lbnQuIFRoZSBwcm9qZWN0IHdhcyBidWlsdCB3aXRoIGEgUEhQLCBBcGFjaGUgYW5kIE15U1FMIHNldHVwIGFuZCBydW4gb24gYSBGcmVlQlNEIHNlcnZlci4KCgojIyMgVm9sdW50ZWVyCgoqKlRhcmEgQnVkZGhpc3QgTWVkaXRhdGlvbiBDZW50cmUsIERlcmJ5IEVuZ2xhbmQqKiAqYXQgSnVuZSAyMDA1IOKAlCBBdWd1c3QgMjAwNSoKCkhlbHBlZCByZW5vdmF0ZSBhIHR1cm4gb2YgdGhlIGNlbnR1cnkgYnVpbGRpbmcsIG1vc3RseSBkb2luZyBicmlja3dvcmsgb24gdGhlIGNoaW1uZXlzIGJ1dCBhbHNvIHNvbWUgZ2FyZGVuaW5nIGFuZCBjYXJwZW50cnkgd29yay4KCgojIyMgSW50ZXJuCgoqKkZyZWRkYW5zIE11c2lrIEFCLCBHw7Z0ZWJvcmcqKiAqYXQgMjAwMSDigJQgMjAwMioKCioqTXVzaWtiw7Zyc2VuLCBHw7Z0ZWJvcmcqKiAqYXQgMjAwMCoKCgoKRWR1Y2F0aW9uCi0tLS0tLS0tLQoKIyMjIElULUd5bW5hc2lldCAoVXBwZXIgU2Vjb25kYXJ5IFRlY2huaWNhbCBTY2hvb2wpLCBWLiBGcsO2bHVuZGEKCioqSW5mb3JtYXRpb24gdGVjaG5vbG9neSwgZWxlY3Ryb25pY3MgYW5kIHNjaWVuY2UqKiAqYXQgQXVnIDIwMDIg4oCUIEp1biAyMDA1KgoKU2Nob2xhcnNoaXAgZm9yIEV4Y2VsbGVudCBwcm9ncmFtbWluZyBza2lsbHMgYW5kIGV4Y2VsbGVudCBjb21wbGV0aW9uIG9mIGZpbmFsIHByb2plY3QgKGNvbnN0cnVjdGlvbiBvZiBhIGhpLWZpIHN0ZXJlbyBhbXBsaWZpZXIpLgoKClNraWxscwotLS0tLS0KCiMjIyBQcm9ncmFtbWluZwoKKyBKYXZhU2NyaXB0CisgTm9kZS5qcworIENvZmZlZVNjcmlwdAorIFB5dGhvbgorIEMjCisgSmF2YQorIEMKKyBDKysKCiMjIyBUb29scwoKKyBWaW0KKyBHaXQKKyBNZXJjdXJpYWwKKyBTdWJ2ZXJzaW9uCgojIyMgRGVzaWduCgorIEdpbXAKKyBJbmtzY2FwZQ==">
+              curriculum vitae</a> on Dr. Markdown or <a href="res/ChristopherFreden.pdf">download</a> as PDF.
+          </p>
+        </section>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
   </body>
 </html>

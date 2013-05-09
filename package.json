@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "devDependencies": {
     "three": "~0.58.9",
-    "browserify": "~2.13.3"
+    "browserify": "~2.13.3",
+    "uglify-js": "*"
   },
   "scripts": {
-    "install": "node_modules/.bin/browserify lib/main.js > bundle.js"
+    "install": "node_modules/.bin/browserify lib/main.js | node_modules/.bin/uglifyjs > bundle.js"
   }
 }

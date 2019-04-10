@@ -2,11 +2,12 @@
   "name": "icetan.github.io",
   "version": "0.0.1",
   "devDependencies": {
-    "three": "~0.58.9",
-    "browserify": "~2.13.3",
-    "uglify-js": "*"
+    "browserify": "^16.2.3",
+    "three": "^0.58.10",
+    "uglify-js": "^3.5.4"
   },
   "scripts": {
-    "install": "node_modules/.bin/browserify lib/main.js | node_modules/.bin/uglifyjs > bundle.js"
+    "bundle": "browserify lib/main.js | uglifyjs -o ./bundle.js",
+    "install": "yarn bundle"
   }
 }

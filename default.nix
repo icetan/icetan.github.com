@@ -1,19 +1,23 @@
-{ pkgs ? import (fetchTarball https://nixos.org/channels/nixos-19.03/nixexprs.tar.xz) {}
-, yarn2nix ? import (fetchTarball https://github.com/moretea/yarn2nix/archive/780e33a07fd821e09ab5b05223ddb4ca15ac663f.tar.gz) { inherit pkgs; }
-}: (yarn2nix.mkYarnPackage {
-  name = "www-icetan-org";
-  src = pkgs.lib.sourceByRegex ./. [ "package.json" "lib(/.*)?" "res(/.*)?" "index.html" ];
-  packageJson = ./package.json;
-  yarnLock = ./yarn.lock;
+{ pkgs ? import <nixpkgs> {} }:
 
-  buildPhase = ''
-    yarn bundle
-  '';
+let
+  yarnPackage = pkgs.mkYarnPackage {
+    src = pkgs.lib.sourceByRegex ./. [
+      "package.json" "index.html"
+      "lib" "lib/.*"
+      "res" "res/.*"
+    ];
+    packageJson = ./package.json;
+    yarnLock = ./yarn.lock;
 
-  installPhase = ''
-    mkdir -p $out
-    cp -r -t $out res/ index.html deps/*/bundle.js
-  '';
+    buildPhase = ''
+      yarn bundle
+    '';
 
-  distPhase = "true";
-})
+    distPhase = "true";
+  };
+in pkgs.runCommand "www-icetan-org" {} ''
+  mkdir -p $out
+  cd ${yarnPackage}/libexec/*/deps/*/
+  cp -r -t $out res/ index.html bundle.js
+''
